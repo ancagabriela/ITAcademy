@@ -7,6 +7,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws Exception {
+
+
         Rocket rocket1 = null;
         Rocket rocket2 = null;
         try {
@@ -25,46 +27,31 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        rocket1.speedUp();
-        rocket1.speedUp();
-        rocket1.slowDown();
-        rocket1.slowDown();
-        rocket1.slowDown();
-        rocket1.speedUp();
-        rocket1.speedUp();
-        rocket1.speedUp();
+        int cont = 1;
+        int cantidad = rocket1.getPropellers().size();
 
-
-
-        System.out.print(rocket1.getId() +": " + rocket1.actualSpeed() );
-        System.out.print("\n"+ rocket2.getId() + ": " + rocket2.actualSpeed());
-    }
-}
-
-        /*int cont = 1;
-        int cantidad = rocket1.getPropellers().size();*/
-
-
-        /*for (Propeller eso : rocket1.getPropellers()) {
+        System.out.print(rocket1.getId() + ": ");
+        for (Propeller eso : rocket1.getPropellers()) {
             if (cont < cantidad) {
                 System.out.print(eso.getPower() + ",");
             } else {
                 System.out.print(eso.getPower());
             }
             cont++;
-        }*/
+        }
 
-       /* int cont2 = 1;
-        int cantidad2 = rocket2.getPropellers().size();*/
+        int cont2 = 1;
+        int cantidad2 = rocket2.getPropellers().size();
 
-
-       /* for (Propeller ese : rocket2.getPropellers()) {
+        System.out.print("\n"+ rocket2.getId() + ": ");
+        for (Propeller ese : rocket2.getPropellers()) {
             if (cont2 < cantidad2) {
                 System.out.print(ese.getPower() + ",");
             } else {
                 System.out.print(ese.getPower());
             }
-            cont2++;*/
-
-
+            cont2++;
+        }
+    }
+}
 
